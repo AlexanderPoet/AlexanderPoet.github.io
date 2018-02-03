@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .flex-item {
+      height: auto;
+      width: auto;
+    }
+  </style>
+  <title>Alexander Poet</title>
+</head>
+<body>
+    <h1>Under Construction</h1>
+    <div class="flex-item">
+      <img src=http://i67.tinypic.com/2iuc9p0.jpg />
+    </div>
+    <div class="flex-item">
+      <img src=http://i67.tinypic.com/2ufdsp3.gif />
+    </div>
+    <div class="flex-item">
+      <div class="decor">
+        <noscript>
+            <h1>Coming Christmas 2002!</h1>
+        </noscript>
+      </div>
+    </div>
+</body>
+<script>
+  function decorate(str) {
+    var decorated = '';
+    for (let i = 0; i < str.length; i++) {
+      if (i % 2 === 0) {
+        decorated += '<span style="color:red">' + str[i] + '</span>'
+      } else {
+        decorated += '<span style="color:green">' + str[i] + '</span>'
+      }
+    }
+    return decorated;;
+  }
+  var flexArr = document.getElementsByClassName('decor');
+  flexArr[0].innerHTML = '<h1>Coming ' + decorate('Christmas') + ' ' + decorate('2002!') + '</h1';
+</script>
+</html>
